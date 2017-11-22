@@ -4,12 +4,15 @@ left to right direction
 Actor User
 
 rectangle application{
-User -- (Connect to the car)
-User -- (Choose turning mode)
-User -- (Choose speed)
-User -- (Turn right/left)
+User - (Connect to the car)
+User - (Choose turning mode)
+User - (Choose speed)
+User - (Turn right/left)
 User -- (Disconnect from the car)
 }
+
+User -- (See the car's speed)
+User -- (See the car's battery state)
 User -- (Turn on/off the lights)
 User -- (Honk)
 @enduml

@@ -1,0 +1,25 @@
+@startuml
+(*)  --> "Search for wi-fi connection"
+--> "Display connections" as display
+if "" then
+..> [User selected one] "Search for requirements" as search
+--> "Show LogIn requirements" as LogIn
+    if "" then
+    ..> [Wrong password] "Wrong ID message"
+    --> LogIn
+    else
+    ..> [Correct password] "Connect to the car"
+        if "Busy" then
+        ..> [false] "Enable controls"
+        --> "Show game screen"
+        --> (*)
+        else
+        ..> [true] "Already taken message"
+        --> "Disconnect"
+        --> display
+        endif
+    endif
+else
+..> [User canceled] "Quit connection page"
+-->(*)
+@enduml
