@@ -10,4 +10,6 @@ User -- (Choose speed)
 User -- (Turn right/left)
 User -- (Disconnect from the car)
 }
+User -- (Turn on/off the lights)
+User -- (Honk)
 @enduml
